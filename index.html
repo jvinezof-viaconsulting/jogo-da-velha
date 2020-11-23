@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/games.css">
+</head>
+<body>
+  <div class="menu" id="menu">
+    <button class="btn btn-start" onclick="start()">Start</button>
+  </div>
+  <div id="game">
+    <h2 class="hud-player">Player: O</h2>
+    <div id="tabuleiro"></div>
+    <button class="btn btn-restart" onclick="restart()">Restart</button>
+  </div>
+  <script src="./scripts/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  background-color: #d4b898;
+  font-family: 'Nova Mono', monospace;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu.game-started {
+  display: none;
+}
+
+.btn {
+  min-width: 60px;
+  padding: 10px 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-start {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #76df82;
+  box-shadow: 0 4px 0 #169365;
+  color: #fff;
+}
+
+.btn-start:hover {
+  transition: box-shadow .1s ease-out;
+  box-shadow: 0 0px 0 #169365;
+}
+
+.btn-restart {
+  display: none;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #8dcaa1;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 0 #a4d288;
+}
+
+.btn-restart:hover {
+  transition: box-shadow .1s ease-out;
+  box-shadow: 0 0px 0 #a4d288;
+}
+
+.btn-restart.show {
+  display: block;
+}
+
+.hud-player {
+  color: #fff;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#game {
+  display: none;
+}
+
+#game.started {
+  display: block;
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+.linha {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  display: flex;
+}
+
+.linha .coluna:first-child {
+  border-right: none;
+}
+
+.linha .coluna:last-child {
+  border-left: none;
+}
+
+.linha[data-linha="0"] .coluna {
+  border-bottom: none;
+}
+
+.linha:last-child .coluna {
+  border-top: none;
+}
+
+.coluna {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: #a4d288;
+  border: 2px solid #dd9296;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 0px;
+  display: block;
+}
+
+.coluna:focus {
+  outline: none;
+}
+
+.coluna:hover {
+  background-color: #76df82;
+}
+
+.coluna.marcado {
+  background-color: #76df82;
+}
